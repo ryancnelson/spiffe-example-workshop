@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #declare -r SPIRE_URL="http://s3.us-east-2.amazonaws.com/scytale-artifacts/spire/spire-b90d108-linux-x86_64-glibc.tar.gz"
-declare -r SPIRE_URL="https://github.com/spiffe/spire/releases/download/0.6.1/spire-0.6.1-linux-x86_64-glibc.tar.gz"
+#declare -r SPIRE_URL="https://github.com/spiffe/spire/releases/download/0.6.1/spire-0.6.1-linux-x86_64-glibc.tar.gz"
+declare -r SPIRE_URL="https://github.com/spiffe/spire/releases/download/0.8.0/spire-0.8.0-linux-x86_64-glibc.tar.gz"
 declare -r SPIRE_DIR="/opt/spire"
 
 curl --progress-bar --location ${SPIRE_URL} | tar xzf -
