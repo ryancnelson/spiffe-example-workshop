@@ -2,7 +2,7 @@ FROM ubuntu:xenial
 
 LABEL Description="Spiffe nginx integration"
 LABEL vendor="SPIFFE"
-LABEL version="0.5.0"
+LABEL version="0.6.0"
 
 ARG DEBUG
 ARG SPIRE_GOOPTS
