@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  spiffe-nginx:
+    privileged: true
+    container_name: spiffe-nginx
+    build:
+      context: spiffe-nginx
+      args:
+        - SPIRE_GOOPTS=${SPIRE_GOOPTS}
+        - DEBUG=${DEBUG}
+    ports:
+      - "80:80"
+    hostname: spiffe-nginx
+    tty: true
+    volumes:
+      - .:/home/spiffe-nginx
+  

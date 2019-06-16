@@ -1,0 +1,35 @@
+defscrollback 10000
+
+screen -t spire-server bash -c "./connect.sh 'cd /opt/spire/ && /bin/bash'"
+screen -t spire-agent bash -c "./connect.sh 'cd /opt/spire/ && /bin/bash'"
+screen -t nginx-blog bash -c "./connect.sh 'cd /opt/spiffe-nginx/ && /bin/bash'"
+screen -t nginx-fe bash -c "./connect.sh 'cd /opt/spiffe-nginx/ && /bin/bash'"
+screen -t certs bash -c "./connect.sh 'cd /certs/ && /bin/bash'"
+screen -t nginx-conf bash -c "./connect.sh 'cd /usr/local/nginx/ && /bin/bash'"
+
+mousetrack on
+rendition so wb
+caption string "%n %t"
+
+split -v
+focus right
+split
+focus down
+split
+focus left
+split
+focus up
+split
+focus up
+
+select 0
+focus right
+select 1
+focus down
+select 3
+focus down
+select 5
+focus left
+select 4
+focus up
+select 2
